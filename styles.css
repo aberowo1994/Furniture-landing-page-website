@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
+:root {
+  --main--color: hsla(190, 40%, 33%, 1);
+  --overlay--color: hsla(192, 16%, 94%, 1);
+  --text--color-w: #fff;
+  --text--color-b: #000;
+  --font12: 12px;
+  --font14: 14px;
+  --font22: 22px;
+  --font35: 35px;
+  --font50: 50px;
+}
+/* configuring the page start */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Lora", serif;
+  letter-spacing: 1.5px;
+  font-size: var(--font14);
+}
+button {
+  border: none;
+  border-radius: 30px;
+}
+/* configuring the page end */
+body {
+  height: 100vh;
+  width: 100%;
+}
+header {
+  width: 100%;
+}
+header #logo--nav--con {
+  padding: 1rem 7rem;
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#logo--nav--con .logo {
+  font-size: 22px;
+  text-transform: capitalize;
+  color: var(--main--color);
+  font-weight: bolder;
+}
+header .nav ul li {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.nav ul li > a {
+  color: var(--main--color);
+  text-transform: capitalize;
+  font-weight: bold;
+  transition: background 300ms linear;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.nav li a:focus {
+  background: var(--overlay--color);
+  color: var(--text--color-b);
+  border-radius: 20px;
+}
+header .list--con > [data-login="login--button"] {
+  background-color: var(--main--color);
+  padding: 0.6rem 2rem;
+  color: var(--text--color-w);
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 300ms linear;
+}
+.list--con > [data-login="login--button"]:hover {
+  background-color: var(--overlay--color);
+  color: var(--text--color-b);
+  font-weight: bold;
+}
+header > #main {
+  width: inherit;
+  background-color: var(--overlay--color);
+}
+main > section {
+  padding: 12rem 7rem 12rem 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#main > section .lt--col {
+  width: 40%;
+  align-self: flex-start;
+}
+#main > section .lt--col h1 {
+  font-size: var(--font50);
+  text-transform: capitalize;
+}
+#main > section .lt--col h1 > span {
+  font-size: var(--font50);
+  text-transform: uppercase;
+  color: var(--main--color);
+}
+
+#main > section .lt--col > p {
+  line-height: 22px;
+  padding: 0 10rem 0 0;
+  margin-top: 1.5rem;
+}
+#main > section .lt--col > button {
+  margin-top: 3rem;
+  padding: 0.9rem 3rem;
+  cursor: pointer;
+  background-color: var(--main--color);
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--text--color-w);
+  transition: 300ms linear all;
+}
+#main > section .lt--col > button:hover {
+  color: var(--text--color-b);
+}
+#main > section .rt--col {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: 60%;
+}
+#main > section .rt--col > .rt--imgCon {
+  overflow: hidden;
+  width: 210px;
+  height: 450px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.rt--imgCon > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#main > section .rt--col > .rt--imgCon1 {
+  align-self: flex-end;
+  height: 250px;
+  width: 250px;
+}
+#main > section .rt--col > .rt--imgCon3 {
+  transform: translateY(-7rem);
+}
+
+/* Sction 2 styling start here */
+#sc--2 {
+  width: 100%;
+  background-color: var(--overlay--color);
+  padding-bottom: 4rem;
+}
+#sc--2 section {
+  background-image: url("/assets/img--4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0rem 0 0 7rem;
+  animation: changeImage 10s 2s ease infinite;
+}
+@keyframes changeImage {
+  0% {
+    background-image: url("/assets/img--4.png");
+  }
+  25% {
+    background-image: url("/assets/img--7.jpeg");
+  }
+  50% {
+    background-image: url("/assets/img--8.jpeg");
+  }
+  75% {
+    background-image: url("/assets/img--10.jpeg");
+  }
+  100% {
+    background-image: url("/assets/img--11.jpeg");
+  }
+}
+#sc--2 section > .ct--con {
+  position: relative;
+  width: 450px;
+  height: 100%;
+  background-color: var(--main--color);
+  color: var(--text--color-w);
+  padding: 3rem 0 10rem 4rem;
+}
+#sc--2 section > .ct--con::before {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background-color: var(--main--color);
+  z-index: 0;
+}
+#sc--2 section > .ct--con h1 {
+  isolation: isolate;
+  font-size: var(--font35);
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+#sc--2 section > .ct--con p {
+  padding-right: 5rem;
+  isolation: isolate;
+  line-height: 25px;
+}
+#sc--2 section > .ct--con > button {
+  margin-top: 3rem;
+  padding: 1rem 3rem;
+  border-radius: 0;
+  background: transparent;
+  transition: all 300ms linear;
+  outline: 1px solid rgba(255, 255, 255, 1);
+  color: var(--text--color-w);
+  text-transform: capitalize;
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.ct--con > button:hover {
+  transform: scale(1.03);
+}
+/* Sction 2 styling end here */
+/* section 3 styliing start here */
+#sc--3 {
+  width: 100%;
+  padding: 2rem 7rem;
+}
+#sc--3 .sc3--rw1 {
+  text-align: center;
+  line-height: 50px;
+}
+#sc--3 .sc3--rw1 h1 {
+  font-size: var(--font35);
+  color: var(--main--color);
+  text-transform: capitalize;
+}
+#sc--3 .sc3--rw2 {
+  display: grid;
+  padding-top: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "firstImage  firstImage secondImage"
+    "firstImage  firstImage thirdImage"
+    "fourthImage sixthImage sixthImage"
+    "fifthImage sixthImage sixthImage";
+  column-gap: 4rem;
+  row-gap: 1rem;
+}
+#sc--3 .sc3--imgCon {
+  position: relative;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.sc3--imgCon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 350ms ease-in-out;
+}
+.sc3--imgCon:hover::before {
+  opacity: 1;
+}
+#sc--3 .sc3--imgCon > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sc3--rw2 > [data-sc3Img="1"] {
+  grid-area: firstImage;
+  width: 100%;
+}
+.sc3--rw2 > [data-sc3Img="2"] {
+  grid-area: secondImage;
+  height: 250px;
+  height: calc(450px / 2) !important;
+}
+.sc3--rw2 > [data-sc3Img="3"] {
+  grid-area: thirdImage;
+  width: 100%;
+  height: calc(450px / 2) !important;
+}
+.sc3--rw2 > [data-sc3Img="4"] {
+  grid-area: fourthImage;
+  width: 100%;
+  height: calc(450px / 2) !important;
+  margin-top: 1rem;
+}
+.sc3--rw2 > [data-sc3Img="5"] {
+  grid-area: fifthImage;
+  height: 250px;
+  height: calc(450px / 2) !important;
+}
+.sc3--rw2 > [data-sc3Img="6"] {
+  grid-area: sixthImage;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+/* section 3 styliing end here */
+/*  */
+#sc--4 {
+  background: var(--overlay--color);
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* columns: 4 auto;
+  column-gap: 2rem;
+  column-fill: balance; */
+  padding: 3rem 7rem;
+}
+#sc--4 > .testimonial {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+#sc--4 > .testimonial > .testimonial--img {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: transform 300ms linear;
+}
+#sc--4 > .testimonial > .testimonial--img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#sc--4 > .testimonial > .testimonial--contents {
+  width: 70%;
+}
+#sc--4 > .testimonial > .testimonial--contents p {
+  font-size: var(--font12);
+  margin-top: 1rem;
+}
+
+.testimonial:hover .testimonial--img {
+  transform: scale(1.5);
+}
+/* Section 5 styling start here */
+/* declaration here */
+label,
+input {
+  display: block;
+}
+/* declaration here */
+#sc--5 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0;
+}
+#sc--5 .ltcont--con {
+  width: 50%;
+  height: 100%;
+  background: var(--overlay--color);
+  padding: 5rem 7rem;
+}
+#sc--5 > .ltcont--con .contact--ltCol > form {
+  margin-top: 2rem;
+}
+#sc--5 > .ltcont--con .contact--ltCol h1 {
+  text-transform: capitalize;
+  font-size: var(--font22);
+}
+.contact--ltCol > form > div,
+.contact--ltCol > form > div > input {
+  margin-top: 1.5rem;
+}
+form > div {
+  width: 400px;
+}
+form > div > label {
+  text-transform: capitalize;
+  color: var(--main--color);
+  font-weight: bold;
+}
+form > div > input {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 20px;
+}
+form > div > textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  border-radius: 20px;
+  padding: 2rem;
+}
+form > .contact--btn--con button {
+  background: var(--main--color);
+  color: var(--text--color-w);
+  padding: 0.8rem 3rem;
+}
+#sc--5 .rtcont--con {
+  width: 50%;
+  align-self: flex-end;
+}
+#sc--5 .rtcont--con .contact--rtCol > img {
+  height: 500px;
+  width: 600px;
+  object-fit: center;
+  transform: translate(-6rem, -2rem);
+}
+/* Section 5 styling end here */
+/* footer styling */
+footer {
+  position: relative;
+  width: 100%;
+  padding: 3rem 0rem;
+  text-align: center;
+}
+footer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: calc(100% - 10%);
+  background: var(--overlay--color);
+}
+footer span {
+  color: var(--main--color);
+  font-weight: bold;
+}
+/* footer styling */
