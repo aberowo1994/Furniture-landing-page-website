@@ -135,6 +135,7 @@ main > section {
   width: 210px;
   height: 450px;
   border-radius: 3px;
+  transition: transform 1s ease-out;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 .rt--imgCon > img {
@@ -142,13 +143,20 @@ main > section {
   height: 100%;
   object-fit: cover;
 }
+.rt--imgCon:hover {
+  transform: scale(1.05);
+}
 #main > section .rt--col > .rt--imgCon1 {
   align-self: flex-end;
   height: 250px;
   width: 250px;
 }
-#main > section .rt--col > .rt--imgCon3 {
-  transform: translateY(-7rem);
+.rt--imgCon3 {
+  transform: translate(0, -7rem);
+  /* border: 2px slateblue solid; */
+}
+.rt--col .rt--imgCon3:hover {
+  transform: scale(1.05) translateY(-7rem);
 }
 
 /* Sction 2 styling start here */
@@ -158,12 +166,12 @@ main > section {
   padding-bottom: 4rem;
 }
 #sc--2 section {
-  background-image: url("/assets/img--4.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 0rem 0 0 7rem;
-  animation: changeImage 10s 2s ease infinite;
+  transition: background 2s ease ;
+  animation: changeImage 8s  ease infinite alternate-reverse;
 }
 @keyframes changeImage {
   0% {
